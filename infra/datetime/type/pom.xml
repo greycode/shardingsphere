@@ -27,7 +27,7 @@
     <artifactId>shardingsphere-infra-datetime-type</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-
+    
     <modules>
         <module>system</module>
         <module>database</module>

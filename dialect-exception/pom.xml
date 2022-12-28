@@ -27,7 +27,7 @@
     <artifactId>shardingsphere-dialect-exception</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-
+    
     <modules>
         <module>core</module>
         <module>mysql</module>

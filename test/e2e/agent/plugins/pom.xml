@@ -27,7 +27,7 @@
     <artifactId>shardingsphere-test-e2e-agent-plugins</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-
+    
     <modules>
         <module>common</module>
         <module>metrics</module>

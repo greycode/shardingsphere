@@ -27,14 +27,14 @@
     <artifactId>shardingsphere-test-it</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-
+    
     <modules>
         <module>parser</module>
         <module>optimizer</module>
         <module>rewriter</module>
         <module>pipeline</module>
     </modules>
-
+    
     <build>
         <plugins>
             <plugin>

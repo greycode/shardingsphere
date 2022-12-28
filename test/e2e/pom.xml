@@ -27,7 +27,7 @@
     <artifactId>shardingsphere-test-e2e</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-
+    
     <modules>
         <module>fixture</module>
         <module>env</module>
@@ -39,11 +39,11 @@
         <module>showprocesslist</module>
         <module>agent</module>
     </modules>
-
+    
     <properties>
         <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
-
+    
     <build>
         <plugins>
             <plugin>

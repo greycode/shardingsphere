@@ -27,7 +27,7 @@
     <artifactId>shardingsphere-transaction-type</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-
+    
     <modules>
         <module>xa</module>
         <module>base</module>

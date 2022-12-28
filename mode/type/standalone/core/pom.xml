@@ -26,7 +26,7 @@
     </parent>
     <artifactId>shardingsphere-standalone-mode-core</artifactId>
     <name>${project.artifactId}</name>
-
+    
     <dependencies>
         <dependency>
             <groupId>io.github.greycode</groupId>
@@ -38,7 +38,7 @@
             <artifactId>shardingsphere-standalone-mode-repository-api</artifactId>
             <version>${project.version}</version>
         </dependency>
-
+        
         <dependency>
             <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-test-fixture-jdbc</artifactId>

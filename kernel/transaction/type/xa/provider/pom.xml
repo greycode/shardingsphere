@@ -27,7 +27,7 @@
     <artifactId>shardingsphere-transaction-xa-provider</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-
+    
     <modules>
         <module>atomikos</module>
         <module>narayana</module>

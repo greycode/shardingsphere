@@ -27,14 +27,14 @@
     <artifactId>shardingsphere-db-protocol</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-
+    
     <modules>
         <module>core</module>
         <module>postgresql</module>
         <module>mysql</module>
         <module>opengauss</module>
     </modules>
-
+    
     <dependencies>
         <dependency>
             <groupId>io.github.greycode</groupId>

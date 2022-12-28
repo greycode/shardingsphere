@@ -27,7 +27,7 @@
     <artifactId>shardingsphere-standalone-mode-repository-provider</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-
+    
     <modules>
         <module>jdbc</module>
     </modules>

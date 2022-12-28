@@ -27,7 +27,7 @@
     <artifactId>shardingsphere-cluster-mode-repository</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-
+    
     <modules>
         <module>api</module>
         <module>provider</module>

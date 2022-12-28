@@ -26,7 +26,7 @@
     </parent>
     <artifactId>shardingsphere-readwrite-splitting-distsql-parser</artifactId>
     <name>${project.artifactId}</name>
-
+    
     <dependencies>
         <dependency>
             <groupId>io.github.greycode</groupId>
@@ -44,7 +44,7 @@
             <version>${project.version}</version>
         </dependency>
     </dependencies>
-
+    
     <build>
         <plugins>
             <plugin>

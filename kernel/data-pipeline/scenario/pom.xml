@@ -27,7 +27,7 @@
     <artifactId>shardingsphere-data-pipeline-scenario</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-
+    
     <modules>
         <module>migration</module>
         <module>consistencycheck</module>

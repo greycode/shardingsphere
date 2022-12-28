@@ -27,7 +27,7 @@
     <artifactId>shardingsphere-schedule</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-
+    
     <modules>
         <module>core</module>
     </modules>

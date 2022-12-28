@@ -26,7 +26,7 @@
     </parent>
     <artifactId>shardingsphere-db-discovery-distsql-handler</artifactId>
     <name>${project.artifactId}</name>
-
+    
     <dependencies>
         <dependency>
             <groupId>io.github.greycode</groupId>
@@ -48,7 +48,7 @@
             <artifactId>shardingsphere-db-discovery-distsql-parser</artifactId>
             <version>${project.version}</version>
         </dependency>
-
+        
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>

@@ -27,7 +27,7 @@
     <artifactId>shardingsphere-test-fixture</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-
+    
     <modules>
         <module>jdbc</module>
         <module>infra</module>

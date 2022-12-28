@@ -231,7 +231,15 @@ public final class ParseRexNodeVisitorImpl extends ParseRexNodeBaseVisitor<RexNo
                 rangeList.add(range);
             }
         }
-        return Sarg.of(RexUnknownAs.UNKNOWN, ImmutableRangeSet.copyOf(rangeList));
+        return Sarg.of(RexUnknownAs.UNKNOWN, copyOf(rangeList));
+    }
+    
+    private static <C extends Comparable<?>> ImmutableRangeSet<C> copyOf(Iterable<Range<C>> ranges) {
+        ImmutableRangeSet.Builder<C> builder = new ImmutableRangeSet.Builder<>();
+        for (Range<C> range : ranges) {
+            builder.add(range);
+        }
+        return builder.build();
     }
     
     private RelDataType getType(final TypeContext ctx) {

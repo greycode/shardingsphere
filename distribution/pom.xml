@@ -27,14 +27,14 @@
     <artifactId>shardingsphere-distribution</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-
+    
     <modules>
         <module>src</module>
         <module>jdbc</module>
         <module>proxy</module>
         <module>proxy-native</module>
     </modules>
-
+    
     <properties>
         <maven.deploy.skip>true</maven.deploy.skip>
     </properties>

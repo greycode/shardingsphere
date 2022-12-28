@@ -27,7 +27,7 @@
     <artifactId>shardingsphere-sharding-plugin</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-
+    
     <modules>
         <module>cosid</module>
         <module>nanoid</module>

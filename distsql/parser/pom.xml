@@ -26,7 +26,7 @@
     </parent>
     <artifactId>shardingsphere-distsql-parser</artifactId>
     <name>${project.artifactId}</name>
-
+    
     <dependencies>
         <dependency>
             <groupId>io.github.greycode</groupId>
@@ -38,13 +38,13 @@
             <artifactId>shardingsphere-sql-parser-engine</artifactId>
             <version>${project.version}</version>
         </dependency>
-
+        
         <dependency>
             <groupId>org.antlr</groupId>
             <artifactId>antlr4-runtime</artifactId>
         </dependency>
     </dependencies>
-
+    
     <build>
         <plugins>
             <plugin>

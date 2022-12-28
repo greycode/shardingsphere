@@ -27,7 +27,7 @@
     <artifactId>shardingsphere-proxy</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-
+    
     <modules>
         <module>frontend</module>
         <module>backend</module>

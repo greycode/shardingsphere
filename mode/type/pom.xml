@@ -27,7 +27,7 @@
     <artifactId>shardingsphere-mode-type</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-
+    
     <modules>
         <module>standalone</module>
         <module>cluster</module>

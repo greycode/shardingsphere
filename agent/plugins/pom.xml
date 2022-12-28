@@ -27,14 +27,14 @@
     <artifactId>shardingsphere-agent-plugins</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-
+    
     <modules>
         <module>core</module>
         <module>metrics</module>
         <module>tracing</module>
         <module>logging</module>
     </modules>
-
+    
     <dependencies>
         <dependency>
             <groupId>io.github.greycode</groupId>
@@ -43,7 +43,7 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-
+    
     <build>
         <plugins>
             <plugin>

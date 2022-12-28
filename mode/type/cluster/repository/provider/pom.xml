@@ -27,7 +27,7 @@
     <artifactId>shardingsphere-cluster-mode-repository-provider</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-
+    
     <modules>
         <module>zookeeper</module>
         <module>etcd</module>

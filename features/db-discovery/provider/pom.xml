@@ -27,7 +27,7 @@
     <artifactId>shardingsphere-db-discovery-provider</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-
+    
     <modules>
         <module>mysql</module>
         <module>opengauss</module>

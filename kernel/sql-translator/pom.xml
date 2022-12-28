@@ -27,7 +27,7 @@
     <artifactId>shardingsphere-sql-translator</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-
+    
     <modules>
         <module>api</module>
         <module>core</module>

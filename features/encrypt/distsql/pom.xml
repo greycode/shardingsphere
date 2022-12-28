@@ -27,7 +27,7 @@
     <artifactId>shardingsphere-encrypt-distsql</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-
+    
     <modules>
         <module>statement</module>
         <module>parser</module>

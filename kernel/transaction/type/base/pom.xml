@@ -27,7 +27,7 @@
     <artifactId>shardingsphere-transaction-base</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-
+    
     <modules>
         <module>seata-at</module>
     </modules>

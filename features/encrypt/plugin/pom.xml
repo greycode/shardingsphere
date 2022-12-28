@@ -27,7 +27,7 @@
     <artifactId>shardingsphere-encrypt-plugin</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-
+    
     <modules>
         <module>sm</module>
     </modules>
