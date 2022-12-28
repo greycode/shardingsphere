@@ -27,7 +27,7 @@ Apache ShardingSphere-JDBC 可以通过 `Java` 和 `YAML` 这 2 种方式进行�
 
 ```xml
 <dependency>
-    <groupId>org.apache.shardingsphere</groupId>
+    <groupId>io.github.greycode</groupId>
     <artifactId>shardingsphere-jdbc-core</artifactId>
     <version>${latest.release.version}</version>
 </dependency>

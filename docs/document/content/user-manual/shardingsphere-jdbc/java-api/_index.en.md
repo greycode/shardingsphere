@@ -17,7 +17,7 @@ The Java API is the most complex and flexible configuration method, which is sui
 
 ```xml
 <dependency>
-    <groupId>org.apache.shardingsphere</groupId>
+    <groupId>io.github.greycode</groupId>
     <artifactId>shardingsphere-jdbc-core</artifactId>
     <version>${shardingsphere.version}</version>
 </dependency>

@@ -14,7 +14,7 @@ ShardingSphere 提供 JDBC 驱动，开发者可以在 Spring Boot 中配置 `Sh
 
 ```xml
 <dependency>
-    <groupId>org.apache.shardingsphere</groupId>
+    <groupId>io.github.greycode</groupId>
     <artifactId>shardingsphere-jdbc-core</artifactId>
     <version>${shardingsphere.version}</version>
 </dependency>

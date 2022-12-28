@@ -86,7 +86,7 @@ services:
         <version>8.0.31</version>
     </dependency>
     <dependency>
-        <groupId>org.apache.shardingsphere</groupId>
+        <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-sql-translator-jooq-provider</artifactId>
         <version>5.2.0</version>
     </dependency>

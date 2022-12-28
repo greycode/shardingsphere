@@ -58,13 +58,13 @@ weight = 4
 
 ```xml
 <dependency>
-    <groupId>org.apache.shardingsphere</groupId>
+    <groupId>io.github.greycode</groupId>
     <artifactId>shardingsphere-jdbc-core</artifactId>
     <version>${latest.release.version}</version>
 </dependency>
 ```
 > 注意：请将 `${latest.release.version}` 更改为实际的版本号。
-> 
+>
 ## 配置示例
 
 ```java

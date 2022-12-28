@@ -17,20 +17,20 @@ Apache ShardingSphere 提供 XA 事务，集成了 Bitronix 的实现。
 </properties>
 
 <dependency>
-    <groupId>org.apache.shardingsphere</groupId>
+    <groupId>io.github.greycode</groupId>
     <artifactId>shardingsphere-jdbc-core</artifactId>
     <version>${shardingsphere.version}</version>
 </dependency>
 
 <!-- 使用 XA 事务时，需要引入此模块 -->
 <dependency>
-    <groupId>org.apache.shardingsphere</groupId>
+    <groupId>io.github.greycode</groupId>
     <artifactId>shardingsphere-transaction-xa-core</artifactId>
     <version>${shardingsphere.version}</version>
 </dependency>
-    
+
 <dependency>
-    <groupId>org.apache.shardingsphere</groupId>
+    <groupId>io.github.greycode</groupId>
     <artifactId>shardingsphere-transaction-xa-bitronix</artifactId>
     <version>${shardingsphere.version}</version>
 </dependency>

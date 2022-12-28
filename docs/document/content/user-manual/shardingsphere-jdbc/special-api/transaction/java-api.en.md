@@ -13,28 +13,28 @@ Introducing Maven dependency
 
 ```xml
 <dependency>
-    <groupId>org.apache.shardingsphere</groupId>
+    <groupId>io.github.greycode</groupId>
     <artifactId>shardingsphere-jdbc-core</artifactId>
     <version>${shardingsphere.version}</version>
 </dependency>
 
 <!-- This module is required when using XA transactions -->
 <dependency>
-    <groupId>org.apache.shardingsphere</groupId>
+    <groupId>io.github.greycode</groupId>
     <artifactId>shardingsphere-transaction-xa-core</artifactId>
     <version>${shardingsphere.version}</version>
 </dependency>
 
 <!-- This module is required when using XA's Narayana mode -->
 <dependency>
-    <groupId>org.apache.shardingsphere</groupId>
+    <groupId>io.github.greycode</groupId>
     <artifactId>shardingsphere-transaction-xa-narayana</artifactId>
     <version>${project.version}</version>
 </dependency>
 
 <!-- This module is required when using BASE transactions -->
 <dependency>
-    <groupId>org.apache.shardingsphere</groupId>
+    <groupId>io.github.greycode</groupId>
     <artifactId>shardingsphere-transaction-base-seata-at</artifactId>
     <version>${shardingsphere.version}</version>
 </dependency>

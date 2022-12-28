@@ -25,7 +25,7 @@ None
 
 ```xml
 <dependency>
-    <groupId>org.apache.shardingsphere</groupId>
+    <groupId>io.github.greycode</groupId>
     <artifactId>shardingsphere-sql-translator-jooq-provider</artifactId>
     <version>${project.version}</version>
 </dependency>

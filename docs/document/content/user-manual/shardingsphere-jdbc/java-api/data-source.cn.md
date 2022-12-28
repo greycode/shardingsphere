@@ -16,7 +16,7 @@ ShardingSphere-JDBC 支持所有的数据库 JDBC 驱动和连接池。
 
 ```xml
 <dependency>
-    <groupId>org.apache.shardingsphere</groupId>
+    <groupId>io.github.greycode</groupId>
     <artifactId>shardingsphere-jdbc-core</artifactId>
     <version>${latest.release.version}</version>
 </dependency>
@@ -42,7 +42,7 @@ private Map<String, DataSource> createDataSources() {
     dataSource1.setUsername("root");
     dataSource1.setPassword("");
     dataSourceMap.put("ds_1", dataSource1);
-    
+
     // 配置第 2 个数据源
     HikariDataSource dataSource2 = new HikariDataSource();
     dataSource2.setDriverClassName("com.mysql.jdbc.Driver");

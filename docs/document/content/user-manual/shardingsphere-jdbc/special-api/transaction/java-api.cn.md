@@ -13,28 +13,28 @@ weight = 1
 
 ```xml
 <dependency>
-    <groupId>org.apache.shardingsphere</groupId>
+    <groupId>io.github.greycode</groupId>
     <artifactId>shardingsphere-jdbc-core</artifactId>
     <version>${shardingsphere.version}</version>
 </dependency>
 
 <!-- 使用 XA 事务时，需要引入此模块 -->
 <dependency>
-    <groupId>org.apache.shardingsphere</groupId>
+    <groupId>io.github.greycode</groupId>
     <artifactId>shardingsphere-transaction-xa-core</artifactId>
     <version>${shardingsphere.version}</version>
 </dependency>
 
 <!-- 使用 XA 的 Narayana模式时，需要引入此模块 -->
 <dependency>
-    <groupId>org.apache.shardingsphere</groupId>
+    <groupId>io.github.greycode</groupId>
     <artifactId>shardingsphere-transaction-xa-narayana</artifactId>
     <version>${project.version}</version>
 </dependency>
 
 <!-- 使用 BASE 事务时，需要引入此模块 -->
 <dependency>
-    <groupId>org.apache.shardingsphere</groupId>
+    <groupId>io.github.greycode</groupId>
     <artifactId>shardingsphere-transaction-base-seata-at</artifactId>
     <version>${shardingsphere.version}</version>
 </dependency>

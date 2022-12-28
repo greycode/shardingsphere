@@ -16,7 +16,7 @@ This section describes how to configure data sources through the `JAVA API`.
 
 ```xml
 <dependency>
-    <groupId>org.apache.shardingsphere</groupId>
+    <groupId>io.github.greycode</groupId>
     <artifactId>shardingsphere-jdbc-core</artifactId>
     <version>${latest.release.version}</version>
 </dependency>
@@ -42,7 +42,7 @@ private Map<String, DataSource> createDataSources() {
     dataSource1.setUsername("root");
     dataSource1.setPassword("");
     dataSourceMap.put("ds_1", dataSource1);
-    
+
     // Configure the 2nd data source
     HikariDataSource dataSource2 = new HikariDataSource();
     dataSource2.setDriverClassName("com.mysql.jdbc.Driver");

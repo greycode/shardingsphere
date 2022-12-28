@@ -26,13 +26,13 @@
         <version>${revision}</version>
     </parent>
     <artifactId>shardingsphere-example-generator</artifactId>
-    
+
     <dependencies>
         <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
+            <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-infra-common</artifactId>
         </dependency>
-        
+
         <dependency>
             <groupId>org.yaml</groupId>
             <artifactId>snakeyaml</artifactId>
@@ -42,7 +42,7 @@
             <artifactId>freemarker</artifactId>
         </dependency>
     </dependencies>
-    
+
     <profiles>
         <profile>
             <id>example-generator</id>
@@ -68,7 +68,7 @@
             </build>
         </profile>
     </profiles>
-    
+
     <build>
         <pluginManagement>
             <plugins>

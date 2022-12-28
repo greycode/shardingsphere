@@ -46,7 +46,7 @@ Attributes:
 ## Notes
 
 1. Cluster mode deployment is recommended for production environment.
-1. The `ZooKeeper` registry center is recommended for cluster mode deployment. 
+1. The `ZooKeeper` registry center is recommended for cluster mode deployment.
 1. If there is configuration information in the `ZooKeeper`, please refer to the config information there.
 
 ## Procedure
@@ -55,7 +55,7 @@ Attributes:
 
 ```xml
 <dependency>
- <groupId>org.apache.shardingsphere</groupId>
+ <groupId>io.github.greycode</groupId>
  <artifactId>shardingsphere-jdbc-core</artifactId>
  <version>${latest.release.version}</version>
 </dependency>

@@ -28,7 +28,7 @@ ShardingSphere-JDBC 提供了 JDBC 驱动，可以仅通过配置变更即可使
 
 ```xml
 <dependency>
-    <groupId>org.apache.shardingsphere</groupId>
+    <groupId>io.github.greycode</groupId>
     <artifactId>shardingsphere-jdbc-core</artifactId>
     <version>${shardingsphere.version}</version>
 </dependency>
@@ -62,7 +62,7 @@ try (
 String driverClassName = "org.apache.shardingsphere.driver.ShardingSphereDriver";
 String jdbcUrl = "jdbc:shardingsphere:classpath:config.yaml";
 
-// 以 HikariCP 为例 
+// 以 HikariCP 为例
 HikariDataSource dataSource = new HikariDataSource();
 dataSource.setDriverClassName(driverClassName);
 dataSource.setJdbcUrl(jdbcUrl);

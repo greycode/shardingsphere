@@ -1,7 +1,7 @@
-+++ 
++++
 title = "SQL Parse Format Function — A Technical Deep Dive by Apache ShardingSphere"
 weight = 40
-chapter = true 
+chapter = true
 +++
 
 Complicted SQL statements are some of the most common problems that data scientists and engineers encounter. For example, can you comprehend at first glance the complex SQL statement below?
@@ -60,7 +60,7 @@ select age as b, name as n from table1 join table2 where id = 1 and name = 'lu';
 -- After Formatting
 SELECT age AS b, name AS n
 FROM table1 JOIN table2
-WHERE 
+WHERE
         id = 1
         and name = 'lu';
 ```
@@ -85,7 +85,7 @@ simpleSelect
     | TABLE relationExpr
     ;
  ```
- 
+
 2. We can use IDEA’s ANTLR4 plugin to easily view the syntax tree of the SQL statement.
 
 For more information of ANTLR4 , please refer to: [https://plugins.jetbrains.com/plugin/7358-antlr-v4](https://plugins.jetbrains.com/plugin/7358-antlr-v4.).
@@ -209,13 +209,13 @@ As for Java applications, users only need to add dependencies and call the API.
 
 ```xml
 <dependency>
-    <groupId>org.apache.shardingsphere</groupId>
+    <groupId>io.github.greycode</groupId>
     <artifactId>shardingsphere-sql-parser-engine</artifactId>
     <version>${project.version}</version>
 </dependency>
 
 <dependency>
-    <groupId>org.apache.shardingsphere</groupId>
+    <groupId>io.github.greycode</groupId>
     <artifactId>shardingsphere-sql-parser-mysql</artifactId>
     <version>${project.version}</version>
 </dependency>

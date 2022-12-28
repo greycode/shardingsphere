@@ -24,23 +24,23 @@
     <artifactId>${feature?replace(',', '-')}--${framework}--${mode}--${transaction}</artifactId>
     <version>${shardingsphereVersion}</version>
     <name>${r'${project.artifactId}'}</name>
-    
+
     <dependencies>
         <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
+            <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-jdbc-core</artifactId>
             <version>${r'${project.version}'}</version>
         </dependency>
     <#if transaction?contains("xa")>
         <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
+            <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-transaction-xa-core</artifactId>
             <version>${r'${project.version}'}</version>
         </dependency>
     </#if>
     <#if transaction=="xa-narayana">
         <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
+            <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-transaction-xa-narayana</artifactId>
             <version>${r'${project.version}'}</version>
         </dependency>
@@ -66,7 +66,7 @@
         </dependency>
     <#elseif transaction=="xa-bitronix">
         <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
+            <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-transaction-xa-bitronix</artifactId>
             <version>${r'${project.version}'}</version>
         </dependency>
@@ -77,7 +77,7 @@
         </dependency>
     <#elseif transaction=="base-seata">
         <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
+            <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-transaction-base-seata-at</artifactId>
             <version>${r'${project.version}'}</version>
         </dependency>
@@ -187,7 +187,7 @@
             <version>2.2.0.RELEASE</version>
         </dependency>
     </#if>
-        
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -204,7 +204,7 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.11</version>
         </dependency>
-        
+
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -243,7 +243,7 @@
             </build>
         </profile>
     </profiles>
-    
+
     <build>
         <plugins>
             <plugin>

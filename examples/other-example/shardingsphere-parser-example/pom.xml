@@ -27,34 +27,34 @@
     </parent>
     <artifactId>shardingsphere-parser-example</artifactId>
     <name>${project.artifactId}</name>
-    
+
     <dependencies>
         <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
+            <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-sql-parser-engine</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
+            <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-sql-parser-mysql</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
+            <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-sql-parser-oracle</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
+            <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-sql-parser-sql92</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
+            <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-sql-parser-postgresql</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
+            <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-sql-parser-sqlserver</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
+            <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-sql-parser-opengauss</artifactId>
         </dependency>
     </dependencies>

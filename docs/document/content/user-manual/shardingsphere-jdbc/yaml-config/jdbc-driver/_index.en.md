@@ -28,7 +28,7 @@ ShardingSphere-JDBC provides a JDBC Driver, which can be used only through confi
 
 ```xml
 <dependency>
-    <groupId>org.apache.shardingsphere</groupId>
+    <groupId>io.github.greycode</groupId>
     <artifactId>shardingsphere-jdbc-core</artifactId>
     <version>${shardingsphere.version}</version>
 </dependency>
@@ -62,7 +62,7 @@ try (
 String driverClassName = "org.apache.shardingsphere.driver.ShardingSphereDriver";
 String jdbcUrl = "jdbc:shardingsphere:classpath:config.yaml";
 
-// Take HikariCP as an example 
+// Take HikariCP as an example
 HikariDataSource dataSource = new HikariDataSource();
 dataSource.setDriverClassName(driverClassName);
 dataSource.setJdbcUrl(jdbcUrl);

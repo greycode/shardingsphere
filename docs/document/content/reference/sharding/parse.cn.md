@@ -66,13 +66,13 @@ ShardingSphere 的 SQL 解析器经历了 3 代产品的更新迭代。
 
 ```xml
 <dependency>
-    <groupId>org.apache.shardingsphere</groupId>
+    <groupId>io.github.greycode</groupId>
     <artifactId>shardingsphere-sql-parser-engine</artifactId>
     <version>${project.version}</version>
 </dependency>
 <!-- 根据需要引入指定方言的解析模块（以 MySQL 为例），可以添加所有支持的方言，也可以只添加使用到的 -->
 <dependency>
-    <groupId>org.apache.shardingsphere</groupId>
+    <groupId>io.github.greycode</groupId>
     <artifactId>shardingsphere-sql-parser-mysql</artifactId>
     <version>${project.version}</version>
 </dependency>
@@ -83,7 +83,7 @@ ShardingSphere 的 SQL 解析器经历了 3 代产品的更新迭代。
 ```java
 CacheOption cacheOption = new CacheOption(128, 1024L);
 SQLParserEngine parserEngine = new SQLParserEngine(sql, cacheOption);
-ParseASTNode parseASTNode = parserEngine.parse(sql, useCache); 
+ParseASTNode parseASTNode = parserEngine.parse(sql, useCache);
 ```
 
 - 获取 SQLStatement
