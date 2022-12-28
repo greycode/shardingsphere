@@ -22,12 +22,12 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere</artifactId>
-        <version>5.3.1-SNAPSHOT</version>
+        <version>5.3.1.1-SNAPSHOT</version>
     </parent>
     <artifactId>shardingsphere-sql-parser</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-    
+
     <modules>
         <module>spi</module>
         <module>statement</module>

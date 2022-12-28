@@ -22,22 +22,22 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-transaction-xa-provider</artifactId>
-        <version>5.3.1-SNAPSHOT</version>
+        <version>5.3.1.1-SNAPSHOT</version>
     </parent>
     <artifactId>shardingsphere-transaction-xa-atomikos</artifactId>
     <name>${project.artifactId}</name>
-    
+
     <properties>
         <atomikos.version>5.0.9</atomikos.version>
     </properties>
-    
+
     <dependencies>
         <dependency>
             <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-transaction-xa-spi</artifactId>
             <version>${project.version}</version>
         </dependency>
-        
+
         <dependency>
             <groupId>com.atomikos</groupId>
             <artifactId>transactions</artifactId>

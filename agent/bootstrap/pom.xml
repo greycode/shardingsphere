@@ -22,15 +22,15 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-agent</artifactId>
-        <version>5.3.1-SNAPSHOT</version>
+        <version>5.3.1.1-SNAPSHOT</version>
     </parent>
     <artifactId>shardingsphere-agent-bootstrap</artifactId>
     <name>${project.artifactId}</name>
-    
+
     <properties>
         <premain.class>org.apache.shardingsphere.agent.bootstrap.ShardingSphereAgent</premain.class>
     </properties>
-    
+
     <dependencies>
         <dependency>
             <groupId>io.github.greycode</groupId>
@@ -52,7 +52,7 @@
             <version>${project.version}</version>
         </dependency>
     </dependencies>
-    
+
     <build>
         <finalName>shardingsphere-agent</finalName>
         <plugins>

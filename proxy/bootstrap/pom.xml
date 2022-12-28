@@ -22,11 +22,11 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-proxy</artifactId>
-        <version>5.3.1-SNAPSHOT</version>
+        <version>5.3.1.1-SNAPSHOT</version>
     </parent>
     <artifactId>shardingsphere-proxy-bootstrap</artifactId>
     <name>${project.artifactId}</name>
-    
+
     <dependencies>
         <dependency>
             <groupId>io.github.greycode</groupId>
@@ -98,14 +98,14 @@
             <artifactId>shardingsphere-sharding-cache</artifactId>
             <version>${project.version}</version>
         </dependency>
-        
+
         <dependency>
             <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-test-fixture-infra</artifactId>
             <version>${project.version}</version>
             <scope>test</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -130,7 +130,7 @@
             <artifactId>HikariCP</artifactId>
             <scope>runtime</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>

@@ -22,12 +22,12 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-transaction</artifactId>
-        <version>5.3.1-SNAPSHOT</version>
+        <version>5.3.1.1-SNAPSHOT</version>
     </parent>
     <artifactId>shardingsphere-transaction-type</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-    
+
     <modules>
         <module>xa</module>
         <module>base</module>

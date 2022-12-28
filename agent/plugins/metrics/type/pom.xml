@@ -22,20 +22,20 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-agent-plugin-metrics</artifactId>
-        <version>5.3.1-SNAPSHOT</version>
+        <version>5.3.1.1-SNAPSHOT</version>
     </parent>
     <artifactId>shardingsphere-agent-metrics-type</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-    
+
     <modules>
         <module>prometheus</module>
     </modules>
-    
+
     <properties>
         <target.directory>${project.basedir}/../../target/plugins</target.directory>
     </properties>
-    
+
     <build>
         <plugins>
             <plugin>

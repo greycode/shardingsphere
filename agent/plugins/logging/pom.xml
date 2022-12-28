@@ -22,16 +22,16 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-agent-plugins</artifactId>
-        <version>5.3.1-SNAPSHOT</version>
+        <version>5.3.1.1-SNAPSHOT</version>
     </parent>
     <artifactId>shardingsphere-agent-plugin-logging</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-    
+
     <modules>
         <module>base</module>
     </modules>
-    
+
     <properties>
         <target.directory>${project.basedir}/../target/plugins</target.directory>
     </properties>

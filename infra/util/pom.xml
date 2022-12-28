@@ -22,10 +22,10 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-infra</artifactId>
-        <version>5.3.1-SNAPSHOT</version>
+        <version>5.3.1.1-SNAPSHOT</version>
     </parent>
     <artifactId>shardingsphere-infra-util</artifactId>
-    
+
     <dependencies>
         <dependency>
             <groupId>org.yaml</groupId>

@@ -22,20 +22,20 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-test-e2e</artifactId>
-        <version>5.3.1-SNAPSHOT</version>
+        <version>5.3.1.1-SNAPSHOT</version>
     </parent>
     <artifactId>shardingsphere-test-e2e-agent</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-    
+
     <modules>
         <module>plugins</module>
     </modules>
-    
+
     <properties>
         <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
-    
+
     <build>
         <plugins>
             <plugin>
