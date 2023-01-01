@@ -22,15 +22,15 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-agent-tracing-type</artifactId>
-        <version>5.3.1.1</version>
+        <version>5.3.1.2</version>
     </parent>
     <artifactId>shardingsphere-agent-tracing-jaeger</artifactId>
     <name>${project.artifactId}</name>
-    
+
     <properties>
         <jaeger-client.version>0.31.0</jaeger-client.version>
     </properties>
-    
+
     <dependencies>
         <dependency>
             <groupId>io.opentracing</groupId>
@@ -44,14 +44,14 @@
             <groupId>io.opentracing</groupId>
             <artifactId>opentracing-mock</artifactId>
         </dependency>
-        
+
         <dependency>
             <groupId>io.jaegertracing</groupId>
             <artifactId>jaeger-client</artifactId>
             <version>${jaeger-client.version}</version>
         </dependency>
     </dependencies>
-    
+
     <build>
         <plugins>
             <plugin>

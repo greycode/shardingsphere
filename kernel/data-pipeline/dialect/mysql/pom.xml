@@ -22,11 +22,11 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-data-pipeline-dialect</artifactId>
-        <version>5.3.1.1</version>
+        <version>5.3.1.2</version>
     </parent>
     <artifactId>shardingsphere-data-pipeline-mysql</artifactId>
     <name>${project.artifactId}</name>
-    
+
     <dependencies>
         <dependency>
             <groupId>io.github.greycode</groupId>
@@ -38,14 +38,14 @@
             <artifactId>shardingsphere-mysql-protocol</artifactId>
             <version>${project.version}</version>
         </dependency>
-        
+
         <dependency>
             <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-jdbc-core</artifactId>
             <version>${project.version}</version>
             <scope>test</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>

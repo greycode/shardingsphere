@@ -22,22 +22,22 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-cluster-mode-repository-provider</artifactId>
-        <version>5.3.1.1</version>
+        <version>5.3.1.2</version>
     </parent>
     <artifactId>shardingsphere-cluster-mode-repository-nacos</artifactId>
     <name>${project.artifactId}</name>
-    
+
     <properties>
         <nacos.version>1.4.2</nacos.version>
     </properties>
-    
+
     <dependencies>
         <dependency>
             <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-cluster-mode-repository-api</artifactId>
             <version>${project.version}</version>
         </dependency>
-        
+
         <dependency>
             <groupId>com.alibaba.nacos</groupId>
             <artifactId>nacos-client</artifactId>

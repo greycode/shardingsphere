@@ -22,18 +22,18 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-data-pipeline-dialect</artifactId>
-        <version>5.3.1.1</version>
+        <version>5.3.1.2</version>
     </parent>
     <artifactId>shardingsphere-data-pipeline-postgresql</artifactId>
     <name>${project.artifactId}</name>
-    
+
     <dependencies>
         <dependency>
             <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-data-pipeline-core</artifactId>
             <version>${project.version}</version>
         </dependency>
-        
+
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -43,7 +43,7 @@
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
         </dependency>
-        
+
         <dependency>
             <groupId>org.freemarker</groupId>
             <artifactId>freemarker</artifactId>

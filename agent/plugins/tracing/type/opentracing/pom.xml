@@ -22,11 +22,11 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-agent-tracing-type</artifactId>
-        <version>5.3.1.1</version>
+        <version>5.3.1.2</version>
     </parent>
     <artifactId>shardingsphere-agent-tracing-opentracing</artifactId>
     <name>${project.artifactId}</name>
-    
+
     <dependencies>
         <dependency>
             <groupId>io.opentracing</groupId>
@@ -41,7 +41,7 @@
             <artifactId>opentracing-mock</artifactId>
         </dependency>
     </dependencies>
-    
+
     <build>
         <plugins>
             <plugin>

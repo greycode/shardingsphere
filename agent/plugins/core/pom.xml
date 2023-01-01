@@ -22,15 +22,15 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-agent-plugins</artifactId>
-        <version>5.3.1.1</version>
+        <version>5.3.1.2</version>
     </parent>
     <artifactId>shardingsphere-agent-plugin-core</artifactId>
     <name>${project.artifactId}</name>
-    
+
     <properties>
         <target.directory>${project.basedir}/target/lib</target.directory>
     </properties>
-    
+
     <build>
         <plugins>
             <plugin>

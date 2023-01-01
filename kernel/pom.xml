@@ -22,12 +22,12 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere</artifactId>
-        <version>5.3.1.1</version>
+        <version>5.3.1.2</version>
     </parent>
     <artifactId>shardingsphere-kernel</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-    
+
     <modules>
         <module>parser</module>
         <module>single</module>
@@ -39,5 +39,5 @@
         <module>sql-translator</module>
         <module>traffic</module>
     </modules>
-    
+
 </project>

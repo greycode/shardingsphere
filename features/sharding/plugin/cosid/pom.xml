@@ -22,22 +22,22 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-sharding-plugin</artifactId>
-        <version>5.3.1.1</version>
+        <version>5.3.1.2</version>
     </parent>
     <artifactId>shardingsphere-sharding-cosid</artifactId>
     <name>${project.artifactId}</name>
-    
+
     <properties>
         <cosid.version>1.16.0</cosid.version>
     </properties>
-    
+
     <dependencies>
         <dependency>
             <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-sharding-api</artifactId>
             <version>${project.version}</version>
         </dependency>
-        
+
         <dependency>
             <groupId>me.ahoo.cosid</groupId>
             <artifactId>cosid-core</artifactId>

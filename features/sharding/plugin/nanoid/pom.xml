@@ -22,22 +22,22 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-sharding-plugin</artifactId>
-        <version>5.3.1.1</version>
+        <version>5.3.1.2</version>
     </parent>
     <artifactId>shardingsphere-sharding-nanoid</artifactId>
     <name>${project.artifactId}</name>
-    
+
     <properties>
         <jnanoid.version>2.0.0</jnanoid.version>
     </properties>
-    
+
     <dependencies>
         <dependency>
             <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-sharding-api</artifactId>
             <version>${project.version}</version>
         </dependency>
-        
+
         <dependency>
             <groupId>com.aventrix.jnanoid</groupId>
             <artifactId>jnanoid</artifactId>

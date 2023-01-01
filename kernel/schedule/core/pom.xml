@@ -22,18 +22,18 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-schedule</artifactId>
-        <version>5.3.1.1</version>
+        <version>5.3.1.2</version>
     </parent>
     <artifactId>shardingsphere-schedule-core</artifactId>
     <name>${project.artifactId}</name>
-    
+
     <dependencies>
         <dependency>
             <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-infra-common</artifactId>
             <version>${project.version}</version>
         </dependency>
-        
+
         <dependency>
             <groupId>org.apache.shardingsphere.elasticjob</groupId>
             <artifactId>elasticjob-lite-core</artifactId>
@@ -42,7 +42,7 @@
             <groupId>org.apache.shardingsphere.elasticjob</groupId>
             <artifactId>elasticjob-lite-lifecycle</artifactId>
         </dependency>
-        
+
         <dependency>
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
