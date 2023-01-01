@@ -9,6 +9,8 @@ The `REGISTER STORAGE UNIT` syntax is used to register storage unit for the curr
 
 ### Syntax
 
+{{< tabs >}}
+{{% tab name="Grammar" %}}
 ```sql
 RegisterStorageUnit ::=
   'REGISTER' 'STORAGE' 'UNIT' ifNotExists? storageUnitDefinition (',' storageUnitDefinition)*
@@ -49,6 +51,11 @@ key ::=
 value ::=
   literal
 ```
+{{% /tab %}}
+{{% tab name="Railroad diagram" %}}
+<iframe frameborder="0" name="diagram" id="diagram" width="100%" height="100%"></iframe>
+{{% /tab %}}
+{{< /tabs >}}
 
 ### Supplement
 
@@ -67,7 +74,7 @@ value ::=
 - Register storage unit using standard mode
 
 ```sql
-REGISTER STORAGE UNIT su_1 (
+REGISTER STORAGE UNIT ds_0 (
     HOST="127.0.0.1",
     PORT=3306,
     DB="db_1",
@@ -79,7 +86,7 @@ REGISTER STORAGE UNIT su_1 (
 - Register storage unit and set connection pool parameters using standard mode
 
 ```sql
-REGISTER STORAGE UNIT su_1 (
+REGISTER STORAGE UNIT ds_0 (
     HOST="127.0.0.1",
     PORT=3306,
     DB="db_1",
@@ -92,7 +99,7 @@ REGISTER STORAGE UNIT su_1 (
 - Register storage unit and set connection pool parameters using URL patterns
 
 ```sql
-REGISTER STORAGE UNIT su_2 (
+REGISTER STORAGE UNIT ds_0 (
     URL="jdbc:mysql://127.0.0.1:3306/db_2?serverTimezone=UTC&useSSL=false",
     USER="root",
     PASSWORD="root",
@@ -103,7 +110,7 @@ REGISTER STORAGE UNIT su_2 (
 - Register storage unit with `ifNotExists` clause
 
 ```sql
-REGISTER STORAGE UNIT IF NOT EXISTS su_0 (
+REGISTER STORAGE UNIT IF NOT EXISTS ds_0 (
     HOST="127.0.0.1",
     PORT=3306,
     DB="db_0",

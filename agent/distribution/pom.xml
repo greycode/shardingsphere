@@ -27,11 +27,11 @@
     <artifactId>shardingsphere-agent-distribution</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-    
+
     <dependencies>
         <dependency>
             <groupId>io.github.greycode</groupId>
-            <artifactId>shardingsphere-agent-bootstrap</artifactId>
+            <artifactId>shardingsphere-agent-core</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
@@ -65,7 +65,7 @@
             <version>${project.version}</version>
         </dependency>
     </dependencies>
-    
+
     <profiles>
         <profile>
             <id>release</id>

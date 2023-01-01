@@ -9,6 +9,8 @@ weight = 3
 
 ### 语法
 
+{{< tabs >}}
+{{% tab name="语法" %}}
 ```sql
 AlterStorageUnit ::=
   'ALTER' 'STORAGE' 'UNIT' storageUnitDefinition (',' storageUnitDefinition)*
@@ -46,6 +48,11 @@ key ::=
 value ::=
   literal
 ```
+{{% /tab %}}
+{{% tab name="铁路图" %}}
+<iframe frameborder="0" name="diagram" id="diagram" width="100%" height="100%"></iframe>
+{{% /tab %}}
+{{< /tabs >}}
 
 ### 补充说明
 
@@ -63,7 +70,7 @@ value ::=
 - 使用标准模式修改存储单元
 
 ```sql
-ALTER STORAGE UNIT su_0 (
+ALTER STORAGE UNIT ds_0 (
     HOST="127.0.0.1",
     PORT=3306,
     DB="db_0",
@@ -75,7 +82,7 @@ ALTER STORAGE UNIT su_0 (
 - 使用标准模式修改存储单元并设置连接池参数
 
 ```sql
-ALTER STORAGE UNIT su_1 (
+ALTER STORAGE UNIT ds_0 (
     HOST="127.0.0.1",
     PORT=3306,
     DB="db_1",
@@ -88,7 +95,7 @@ ALTER STORAGE UNIT su_1 (
 - 使用 URL 模式修改存储单元并设置连接池参数
 
 ```sql
-ALTER STORAGE UNIT su_2 (
+ALTER STORAGE UNIT ds_0 (
     URL="jdbc:mysql://127.0.0.1:3306/db_2?serverTimezone=UTC&useSSL=false",
     USER="root",
     PASSWORD="root",

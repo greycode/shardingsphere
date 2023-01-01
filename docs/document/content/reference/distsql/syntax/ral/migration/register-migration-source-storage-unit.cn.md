@@ -9,6 +9,8 @@ weight = 4
 
 ### 语法
 
+{{< tabs >}}
+{{% tab name="语法" %}}
 ```sql
 RegisterStorageUnit ::=
   'REGISTER' 'MIGRATION' 'SOURCE' 'STORAGE' 'UNIT' storageUnitDefinition (',' storageUnitDefinition)*
@@ -37,6 +39,11 @@ key ::=
 value ::=
   literal
 ```
+{{% /tab %}}
+{{% tab name="铁路图" %}}
+<iframe frameborder="0" name="diagram" id="diagram" width="100%" height="100%"></iframe>
+{{% /tab %}}
+{{< /tabs >}}
 
 ### 特别说明
 
@@ -53,8 +60,8 @@ value ::=
 - 注册数据迁移源存储单元
 
 ```sql
-REGISTER MIGRATION SOURCE STORAGE UNIT su_0 (
-    URL="jdbc:mysql://127.0.0.1:3306/migration_su_0?serverTimezone=UTC&useSSL=false",
+REGISTER MIGRATION SOURCE STORAGE UNIT ds_0 (
+    URL="jdbc:mysql://127.0.0.1:3306/migration_ds_0?serverTimezone=UTC&useSSL=false",
     USER="root",
     PASSWORD="123456"
 );
@@ -63,8 +70,8 @@ REGISTER MIGRATION SOURCE STORAGE UNIT su_0 (
 - 注册数据迁移源存储单元并设置连接池参数
 
 ```sql
-REGISTER MIGRATION SOURCE STORAGE UNIT su_0 (
-    URL="jdbc:mysql://127.0.0.1:3306/migration_su_0?serverTimezone=UTC&useSSL=false",
+REGISTER MIGRATION SOURCE STORAGE UNIT ds_0 (
+    URL="jdbc:mysql://127.0.0.1:3306/migration_ds_0?serverTimezone=UTC&useSSL=false",
     USER="root",
     PASSWORD="123456",
     PROPERTIES("minPoolSize"="1","maxPoolSize"="20","idleTimeout"="60000")

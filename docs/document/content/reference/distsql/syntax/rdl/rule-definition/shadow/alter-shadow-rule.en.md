@@ -9,6 +9,8 @@ The `ALTER SHADOW RULE` syntax is used to alter shadow rule.
 
 ### Syntax
 
+{{< tabs >}}
+{{% tab name="Grammar" %}}
 ```sql
 AlterShadowRule ::=
   'ALTER' 'SHADOW' 'RULE' shadowRuleDefinition (',' shadowRuleDefinition)*
@@ -49,6 +51,11 @@ key ::=
 value ::=
   literal
 ```
+{{% /tab %}}
+{{% tab name="Railroad diagram" %}}
+<iframe frameborder="0" name="diagram" id="diagram" width="100%" height="100%"></iframe>
+{{% /tab %}}
+{{< /tabs >}}
 
 ### Supplement
 
@@ -66,8 +73,8 @@ value ::=
 
 ```sql
 ALTER SHADOW RULE shadow_rule(
-  SOURCE=demo_su,
-  SHADOW=demo_su_shadow,
+  SOURCE=demo_ds,
+  SHADOW=demo_ds_shadow,
   t_order(TYPE(NAME="SIMPLE_HINT", PROPERTIES("shadow"="true", "foo"="bar"))), 
   t_order_item(TYPE(NAME="VALUE_MATCH", PROPERTIES("operation"="insert","column"="user_id", "value"='1')))
 );

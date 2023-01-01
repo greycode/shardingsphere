@@ -9,6 +9,8 @@ weight = 2
 
 ### 语法定义
 
+{{< tabs >}}
+{{% tab name="语法" %}}
 ```sql
 CreateShadowRule ::=
   'CREATE' 'SHADOW' 'RULE' ifNotExists? shadowRuleDefinition (',' shadowRuleDefinition)*
@@ -52,6 +54,11 @@ key ::=
 value ::=
   literal
 ```
+{{% /tab %}}
+{{% tab name="铁路图" %}}
+<iframe frameborder="0" name="diagram" id="diagram" width="100%" height="100%"></iframe>
+{{% /tab %}}
+{{< /tabs >}}
 
 ### 补充说明
 
@@ -69,8 +76,8 @@ value ::=
 
 ```sql
 CREATE SHADOW RULE shadow_rule(
-  SOURCE=demo_su,
-  SHADOW=demo_su_shadow,
+  SOURCE=demo_ds,
+  SHADOW=demo_ds_shadow,
   t_order(TYPE(NAME="SIMPLE_HINT", PROPERTIES("shadow"="true", "foo"="bar"))), 
   t_order_item(TYPE(NAME="VALUE_MATCH", PROPERTIES("operation"="insert","column"="user_id", "value"='1')))
 );
@@ -80,8 +87,8 @@ CREATE SHADOW RULE shadow_rule(
 
 ```sql
 CREATE SHADOW RULE IF NOT EXISTS shadow_rule(
-  SOURCE=demo_su,
-  SHADOW=demo_su_shadow,
+  SOURCE=demo_ds,
+  SHADOW=demo_ds_shadow,
   t_order(TYPE(NAME="SIMPLE_HINT", PROPERTIES("shadow"="true", "foo"="bar"))), 
   t_order_item(TYPE(NAME="VALUE_MATCH", PROPERTIES("operation"="insert","column"="user_id", "value"='1')))
 );

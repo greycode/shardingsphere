@@ -21,7 +21,7 @@ import com.google.common.base.Preconditions;
 import com.google.common.base.Strings;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
-import org.apache.shardingsphere.agent.config.plugin.PluginConfiguration;
+import org.apache.shardingsphere.agent.api.PluginConfiguration;
 
 /**
  * Remote plugin configuration validator.
@@ -52,6 +52,7 @@ public final class PluginConfigurationValidator {
     
     /**
      * Validate port.
+     * 
      * @param type plugin type
      * @param pluginConfig to be validated plugin configuration
      */

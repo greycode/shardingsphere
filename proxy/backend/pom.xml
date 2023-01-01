@@ -26,7 +26,7 @@
     </parent>
     <artifactId>shardingsphere-proxy-backend</artifactId>
     <name>${project.artifactId}</name>
-    
+
     <dependencies>
         <dependency>
             <groupId>io.github.greycode</groupId>
@@ -101,6 +101,11 @@
         <dependency>
             <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-shadow-distsql-handler</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.greycode</groupId>
+            <artifactId>shardingsphere-mask-distsql-handler</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
@@ -188,7 +193,7 @@
             <artifactId>shardingsphere-sql-federation-executor-original</artifactId>
             <version>${project.version}</version>
         </dependency>
-        
+
         <dependency>
             <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-test-fixture-jdbc</artifactId>
@@ -201,7 +206,7 @@
             <version>${project.version}</version>
             <scope>test</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>

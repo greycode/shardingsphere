@@ -20,7 +20,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.apache.shardingsphere.example</groupId>
+    <groupId>io.github.greycode.example</groupId>
     <artifactId>shardingsphere-examples</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
@@ -28,9 +28,8 @@
 
     <modules>
         <module>example-core</module>
-        <module>other-example</module>
         <module>shardingsphere-proxy-example</module>
-
+        <module>shardingsphere-parser-example</module>
         <module>shardingsphere-example-generator</module>
     </modules>
 

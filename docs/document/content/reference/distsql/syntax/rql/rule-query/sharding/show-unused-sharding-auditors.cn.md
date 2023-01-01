@@ -9,6 +9,8 @@ weight = 9
 
 ### 语法
 
+{{< tabs >}}
+{{% tab name="语法" %}}
 ```sql
 ShowUnusedShardingAuditors::=
   'SHOW' 'SHARDING' 'AUDITOR' ('FROM' databaseName)?
@@ -16,6 +18,12 @@ ShowUnusedShardingAuditors::=
 databaseName ::=
   identifier
 ```
+{{% /tab %}}
+{{% tab name="铁路图" %}}
+<iframe frameborder="0" name="diagram" id="diagram" width="100%" height="100%"></iframe>
+{{% /tab %}}
+{{< /tabs >}}
+
 
 ### 补充说明
 
@@ -34,11 +42,11 @@ databaseName ::=
 - 查询指定逻辑库中未被使用的分片审计器
 
 ```sql
-SHOW UNUSED SHARDING AUDITORS FROM test1;
+SHOW UNUSED SHARDING AUDITORS FROM sharding_db;
 ```
 
 ```sql
-mysql> SHOW UNUSED SHARDING AUDITORS FROM test1;
+mysql> SHOW UNUSED SHARDING AUDITORS FROM sharding_db;
 +-------------------------------+-------------------------+-------+
 | name                          | type                    | props |
 +-------------------------------+-------------------------+-------+

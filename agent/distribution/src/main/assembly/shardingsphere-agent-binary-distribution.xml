@@ -40,7 +40,7 @@
         </fileSet>
         
         <fileSet>
-            <directory>../plugins/logging/target/plugins</directory>
+            <directory>../plugins/logging/base/target/plugins</directory>
             <outputDirectory>./plugins</outputDirectory>
             <includes>
                 <include>**.jar</include>
@@ -48,15 +48,29 @@
         </fileSet>
         
         <fileSet>
-            <directory>../plugins/tracing/target/plugins</directory>
+            <directory>../plugins/tracing/type/target/plugins</directory>
             <outputDirectory>./plugins</outputDirectory>
             <includes>
                 <include>**.jar</include>
             </includes>
         </fileSet>
         <fileSet>
-            <directory>../plugins/metrics/target/plugins</directory>
+            <directory>../plugins/metrics/type/target/plugins</directory>
             <outputDirectory>./plugins</outputDirectory>
+            <includes>
+                <include>**.jar</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>../plugins/core/target/lib</directory>
+            <outputDirectory>./lib</outputDirectory>
+            <includes>
+                <include>**.jar</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>../plugins/metrics/core/target/lib</directory>
+            <outputDirectory>./lib</outputDirectory>
             <includes>
                 <include>**.jar</include>
             </includes>
@@ -67,7 +81,7 @@
         <moduleSet>
             <useAllReactorProjects>true</useAllReactorProjects>
             <includes>
-                <include>*:shardingsphere-agent-bootstrap</include>
+                <include>*:shardingsphere-agent-core</include>
             </includes>
             <binaries>
                 <unpack>false</unpack>
