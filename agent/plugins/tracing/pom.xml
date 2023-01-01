@@ -27,16 +27,16 @@
     <artifactId>shardingsphere-agent-plugin-tracing</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-    
+
     <modules>
         <module>type</module>
         <module>test</module>
     </modules>
-    
+
     <properties>
         <opentracing.version>0.31.0</opentracing.version>
     </properties>
-    
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -49,7 +49,7 @@
                 <artifactId>opentracing-util</artifactId>
                 <version>${opentracing.version}</version>
             </dependency>
-            
+
             <dependency>
                 <groupId>io.opentracing</groupId>
                 <artifactId>opentracing-mock</artifactId>
@@ -58,10 +58,10 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    
+
     <dependencies>
         <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
+            <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-agent-plugin-core</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>
