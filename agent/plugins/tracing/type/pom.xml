@@ -22,31 +22,37 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-agent-plugin-tracing</artifactId>
-        <version>5.3.1.2</version>
+        <version>5.3.1.3</version>
     </parent>
     <artifactId>shardingsphere-agent-tracing-type</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-
+    
     <modules>
         <module>opentracing</module>
         <module>opentelemetry</module>
         <module>jaeger</module>
         <module>zipkin</module>
     </modules>
-
+    
     <properties>
         <target.directory>${project.basedir}/../target/plugins</target.directory>
     </properties>
-
+    
     <dependencies>
         <dependency>
             <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-proxy-frontend-core</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.h2database</groupId>
+                    <artifactId>h2</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
-
+        
         <dependency>
             <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-agent-tracing-test</artifactId>

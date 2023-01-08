@@ -22,11 +22,18 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-infra</artifactId>
-        <version>5.3.1.2</version>
+        <version>5.3.1.3</version>
     </parent>
     <artifactId>shardingsphere-infra-util</artifactId>
-
+    
     <dependencies>
+        <dependency>
+            <groupId>io.github.greycode</groupId>
+            <artifactId>shardingsphere-test-util</artifactId>
+            <version>${project.version}</version>
+            <scope>test</scope>
+        </dependency>
+        
         <dependency>
             <groupId>org.yaml</groupId>
             <artifactId>snakeyaml</artifactId>

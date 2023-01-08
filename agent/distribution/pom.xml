@@ -22,12 +22,12 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-agent</artifactId>
-        <version>5.3.1.2</version>
+        <version>5.3.1.3</version>
     </parent>
     <artifactId>shardingsphere-agent-distribution</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-
+    
     <dependencies>
         <dependency>
             <groupId>io.github.greycode</groupId>
@@ -42,7 +42,7 @@
         <dependency>
             <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-agent-logging-base</artifactId>
-            <version>${project.version}</version>
+            <version>5.3.1.2</version>
         </dependency>
         <dependency>
             <groupId>io.github.greycode</groupId>
@@ -65,7 +65,7 @@
             <version>${project.version}</version>
         </dependency>
     </dependencies>
-
+    
     <profiles>
         <profile>
             <id>release</id>

@@ -23,7 +23,7 @@ import net.bytebuddy.ByteBuddy;
 import net.bytebuddy.agent.builder.AgentBuilder;
 import net.bytebuddy.dynamic.scaffold.TypeValidation;
 import net.bytebuddy.matcher.ElementMatchers;
-import org.apache.shardingsphere.agent.core.config.loader.PluginConfigurationLoader;
+import org.apache.shardingsphere.agent.core.plugin.yaml.plugin.loader.PluginConfigurationLoader;
 import org.apache.shardingsphere.agent.core.logging.LoggingListener;
 import org.apache.shardingsphere.agent.core.plugin.PluginJar;
 import org.apache.shardingsphere.agent.core.plugin.loader.AdvisorConfigurationLoader;

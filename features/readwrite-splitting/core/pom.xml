@@ -22,18 +22,18 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-readwrite-splitting</artifactId>
-        <version>5.3.1.2</version>
+        <version>5.3.1.3</version>
     </parent>
     <artifactId>shardingsphere-readwrite-splitting-core</artifactId>
     <name>${project.artifactId}</name>
-
+    
     <dependencies>
         <dependency>
             <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-readwrite-splitting-api</artifactId>
             <version>${project.version}</version>
         </dependency>
-
+        
         <dependency>
             <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-infra-route</artifactId>
@@ -49,10 +49,16 @@
             <artifactId>shardingsphere-transaction-core</artifactId>
             <version>${project.version}</version>
         </dependency>
-
+        
         <dependency>
             <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-test-fixture-jdbc</artifactId>
+            <version>${project.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.github.greycode</groupId>
+            <artifactId>shardingsphere-test-util</artifactId>
             <version>${project.version}</version>
             <scope>test</scope>
         </dependency>
