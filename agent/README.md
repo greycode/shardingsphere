@@ -27,7 +27,7 @@ cd shardingsphere
 ./mvnw clean install -Prelease
 ```
 
-Artifact is `agent/distribution/target/apache-shardingsphere-${latest.release.version}-shardingsphere-agent-bin.tar.gz`
+Artifact is `distribution/agent/target/apache-shardingsphere-${latest.release.version}-shardingsphere-agent-bin.tar.gz`
 
 ## Quick Start
 
@@ -36,10 +36,18 @@ Artifact is `agent/distribution/target/apache-shardingsphere-${latest.release.ve
 
 ### Quick Start with Proxy
 
-Add the javaagent configuration in the Proxy startup script, as follows:
+Add the agent to the Proxy directory, as follows:
 
 ```shell
-nohup $JAVA ${JAVA_OPTS} ${JAVA_MEM_OPTS} -javaagent:/xx/xx/shardingsphere-agent-{latest.release.version}.jar -classpath ${CLASS_PATH} ${MAIN_CLASS} >> ${STDOUT_FILE} 2>&1 &
+apache-shardingsphere-{latest.release.version}-shardingsphere-proxy-bin/agent/shardingsphere-agent.jar
+```
+
+Start agent with `-g` option by bin/start.sh
+```shell
+sh start.sh -g
+
+# following command also works
+sh start.sh --agent
 ```
 
 ### Quick Start with JDBC
@@ -68,14 +76,14 @@ Custom plugins need to implement this interface.
 
 ```yaml
 advisors:
-  - target: org.apache.shardingsphere.mode.metadata.MetaDataContextsFactory # class that need interception enhancements
-    advice: org.apache.shardingsphere.agent.plugin.metrics.core.advice.MetaDataContextsFactoryAdvice # enhanced class
+  - target: xxx.TargetClass # class that need interception enhancements
+    advice: xxx.XXXAdvice # enhanced class
     pointcuts: # intercept methods
-      - name: create # method name
+      - name: foo # method name
         type: method # intercept type. configuring "method" when intercepting the method, configuring "constructor" when intercepting the constructor
         params: # method parameters, just satisfy the unique identification method
-          - index: 3 # parameter index
-            type: java.util.Map # parameter type
+          - index: 0 # parameter index
+            type: java.lang.String # parameter type
 ```
 
 The file location is as follows:
@@ -89,8 +97,8 @@ The file location is as follows:
 
 ```yaml
 metrics:
-  - id: proxy_request_total # metric id
+  - id: xxx_id # metric id
     type: COUNTER # metric type, COUNTER、GAUGE、HISTOGRAM、SUMMARY
-    name: proxy_request_total # metric name
-    help: the shardingsphere proxy request total # metric help
+    name: xxx_name # metric name
+    help: xxx help # metric help
 ```

@@ -20,11 +20,10 @@ package org.apache.shardingsphere.agent.core.advisor.config.yaml.swapper;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import org.apache.shardingsphere.agent.core.advisor.config.AdvisorConfiguration;
-import org.apache.shardingsphere.agent.core.advisor.config.yaml.entity.YamlAdvisorConfiguration;
 import org.apache.shardingsphere.agent.core.advisor.config.yaml.entity.YamlAdvisorsConfiguration;
 
 import java.util.Collection;
-import java.util.LinkedList;
+import java.util.stream.Collectors;
 
 /**
  * YAML advisors configuration swapper.
@@ -35,17 +34,11 @@ public final class YamlAdvisorsConfigurationSwapper {
     /**
      * Swap from YAML advisors configuration to advisor configurations.
      * 
-     * @param yamlAdvisorsConfig YAML advisors configuration
-     * @param type plugin type
+     * @param yamlConfig YAML advisors configuration
+     * @param pluginType plugin type
      * @return advisor configurations
      */
-    public static Collection<AdvisorConfiguration> swap(final YamlAdvisorsConfiguration yamlAdvisorsConfig, final String type) {
-        Collection<AdvisorConfiguration> result = new LinkedList<>();
-        for (YamlAdvisorConfiguration each : yamlAdvisorsConfig.getAdvisors()) {
-            if (null != each.getTarget()) {
-                result.add(YamlAdvisorConfigurationSwapper.swap(each, type));
-            }
-        }
-        return result;
+    public static Collection<AdvisorConfiguration> swap(final YamlAdvisorsConfiguration yamlConfig, final String pluginType) {
+        return yamlConfig.getAdvisors().stream().filter(each -> null != each.getTarget()).map(each -> YamlAdvisorConfigurationSwapper.swap(each, pluginType)).collect(Collectors.toList());
     }
 }

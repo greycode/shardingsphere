@@ -121,9 +121,9 @@ Type: TELEPHONE_RANDOM_REPLACE
 
 Attributes:
 
-| *Name*          | *DataType* | *Description*                         |
-|-----------------|--------|---------------------------------------|
-| network-numbers | String | Network numbers (separate with comma) |
+| *Name*          | *DataType* | *Description*                                          |
+|-----------------|--------|--------------------------------------------------------|
+| network-numbers | String | Network numbers (separate with comma, default value: 130,131,132,133,134,135,136,137,138,139,150,151,152,153,155,156,157,158,159,166,170,176,177,178,180,181,182,183,184,185,186,187,188,189,191,198,199) |
 
 #### Landline Number Random Replace Data Masking Algorithm
 
@@ -134,6 +134,19 @@ Attributes:
 | *Name*          | *DataType* | *Description*                         |
 |-----------------|--------|---------------------------------------|
 | landline-numbers | String | Landline numbers (separate with comma) |
+
+#### Generic table random replace algorithm.
+
+Type: GENERIC_TABLE_RANDOM_REPLACE
+
+Attributes:
+
+| *Name*                 | *DataType* | *Description*                                                                                                    |
+|------------------------|--------|------------------------------------------------------------------------------------------------------------------|
+| uppercase-letter-codes | String   | Uppercase letter codes (separate with comma, default value: A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z) |
+| lowercase-letter-codes | String   | Lowercase-letter codes (separate with comma, default value: a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z) |
+| digital-random-codes   | String   | Numbers (separate with comma, default value: 0,1,2,3,4,5,6,7,8,9)                                                |
+| special-codes          | String   | Special codes (separate with comma, default value: ~,!,@,#,$,%,^,&,*,:,&lt;,&gt;,&#166;)                         |
 
 ## Operating Procedure
 1. Configure maskAlgorithms in a mask rule.

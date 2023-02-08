@@ -20,8 +20,8 @@ package org.apache.shardingsphere.agent.core.plugin.jar;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import lombok.SneakyThrows;
-import org.apache.shardingsphere.agent.core.log.LoggerFactory;
-import org.apache.shardingsphere.agent.core.log.LoggerFactory.Logger;
+import org.apache.shardingsphere.agent.core.log.AgentLogger;
+import org.apache.shardingsphere.agent.core.log.AgentLoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
@@ -32,7 +32,6 @@ import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.Collection;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.jar.JarFile;
 
 /**
@@ -41,7 +40,7 @@ import java.util.jar.JarFile;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class PluginJarLoader {
     
-    private static final Logger LOGGER = LoggerFactory.getLogger(PluginJarLoader.class);
+    private static final AgentLogger LOGGER = AgentLoggerFactory.getAgentLogger(PluginJarLoader.class);
     
     /**
      * Load plugin jars.
@@ -50,32 +49,29 @@ public final class PluginJarLoader {
      * @return plugin jars
      * @throws IOException IO exception
      */
-    public static Collection<PluginJar> load(final File agentRootPath) throws IOException {
-        List<File> jarFiles = new LinkedList<>();
-        getJarFiles(new File(String.join("/", agentRootPath.getPath(), "lib")), jarFiles);
-        getJarFiles(new File(String.join("/", agentRootPath.getPath(), "plugins")), jarFiles);
-        Collection<PluginJar> result = new LinkedList<>();
+    public static Collection<JarFile> load(final File agentRootPath) throws IOException {
+        Collection<File> jarFiles = getJarFiles(new File(String.join(File.separator, agentRootPath.getPath(), "plugins")));
+        Collection<JarFile> result = new LinkedList<>();
         for (File each : jarFiles) {
-            result.add(new PluginJar(new JarFile(each, true), each));
+            result.add(new JarFile(each, true));
             LOGGER.info("Loaded jar: {}", each.getName());
         }
         return result;
     }
     
     @SneakyThrows(IOException.class)
-    private static void getJarFiles(final File file, final List<File> jarFiles) {
+    private static Collection<File> getJarFiles(final File file) {
+        Collection<File> result = new LinkedList<>();
         Files.walkFileTree(file.toPath(), new SimpleFileVisitor<Path>() {
             
             @Override
             public FileVisitResult visitFile(final Path path, final BasicFileAttributes attributes) {
                 if (path.toFile().isFile() && path.toFile().getName().endsWith(".jar")) {
-                    jarFiles.add(path.toFile());
-                }
-                if (path.toFile().isDirectory()) {
-                    getJarFiles(path.toFile(), jarFiles);
+                    result.add(path.toFile());
                 }
                 return FileVisitResult.CONTINUE;
             }
         });
+        return result;
     }
 }

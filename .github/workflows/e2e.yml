@@ -24,14 +24,16 @@ on:
       - '.github/workflows/e2e.yml'
       - '**/pom.xml'
       - '**/src/main/**'
-      - 'distribution/proxy/**'
-      - 'test/pom.xml'
-      - 'test/e2e/**'
       - '!examples/**'
       - '!distribution/**'
+      - 'distribution/proxy/**'
       - '!distribution/proxy/src/main/release-docs/**'
       - '!kernel/data-pipeline/**'
       - '!test/**'
+      - 'test/pom.xml'
+      - 'test/e2e/fixture/**'
+      - 'test/e2e/env/**'
+      - 'test/e2e/suite/**'
       - '!*.md'
   pull_request:
     branches: [ master ]
@@ -39,14 +41,16 @@ on:
       - '.github/workflows/e2e.yml'
       - '**/pom.xml'
       - '**/src/main/**'
-      - 'distribution/proxy/**'
-      - '!test/**'
-      - 'test/pom.xml'
-      - 'test/e2e/**'
       - '!examples/**'
       - '!distribution/**'
+      - 'distribution/proxy/**'
       - '!distribution/proxy/src/main/release-docs/**'
       - '!kernel/data-pipeline/**'
+      - '!test/**'
+      - 'test/pom.xml'
+      - 'test/e2e/fixture/**'
+      - 'test/e2e/env/**'
+      - 'test/e2e/suite/**'
       - '!*.md'
   workflow_dispatch:
 
@@ -68,7 +72,7 @@ jobs:
       - uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
-          java-version: '8'
+          java-version: '11'
       - uses: actions/cache@v3
         with:
           path: ~/.m2/repository
@@ -98,6 +102,12 @@ jobs:
         adapter: [ proxy, jdbc ]
         database: [ MySQL, PostgreSQL, openGauss ]
         scenario: [ empty_rules, rdl_empty_rules, passthrough ]
+        additional-options: [ '' ]
+        include:
+          - adapter: proxy
+            database: MySQL
+            scenario: passthrough
+            additional-options: '-Dmysql-connector-java.version=8.0.30'
         exclude:
           - adapter: jdbc
             scenario: passthrough
@@ -121,7 +131,7 @@ jobs:
         if: matrix.adapter == 'proxy'
         run: docker load -i /tmp/${{ env.REPOSITORY_NAME }}-proxy-test.tar
       - name: Run E2E Test
-        run: ./mvnw -nsu -B install -f test/e2e/suite/pom.xml -Dspotless.apply.skip=true -Dit.run.modes=Cluster -Dit.scenarios=${{ matrix.scenario }} -Dit.cluster.adapters=${{ matrix.adapter }} -Dit.cluster.databases=${{ matrix.database }} -Dit.cluster.env.type=DOCKER
+        run: ./mvnw -nsu -B install -f test/e2e/suite/pom.xml -Dspotless.apply.skip=true -Dit.run.modes=Cluster -Dit.run.additional.cases=true -Dit.scenarios=${{ matrix.scenario }} -Dit.cluster.adapters=${{ matrix.adapter }} -Dit.cluster.databases=${{ matrix.database }} -Dit.cluster.env.type=DOCKER ${{ matrix.additional-options }}
 
   it-single-rule:
     name: single rule
@@ -157,7 +167,7 @@ jobs:
         if: matrix.adapter == 'proxy'
         run: docker load -i /tmp/${{ env.REPOSITORY_NAME }}-proxy-test.tar
       - name: Run E2E Test
-        run: ./mvnw -nsu -B install -f test/e2e/suite/pom.xml -Dspotless.apply.skip=true -Dit.cluster.env.type=DOCKER -Dit.cluster.adapters=${{ matrix.adapter }} -Dit.run.modes=${{ matrix.mode }} -Dit.cluster.databases=${{ matrix.database }} -Dit.scenarios=${{ matrix.scenario }}
+        run: ./mvnw -nsu -B install -f test/e2e/suite/pom.xml -Dspotless.apply.skip=true -Dit.cluster.env.type=DOCKER -Dit.cluster.adapters=${{ matrix.adapter }} -Dit.run.modes=${{ matrix.mode }} -Dit.run.additional.cases=true -Dit.cluster.databases=${{ matrix.database }} -Dit.scenarios=${{ matrix.scenario }}
 
   it-mixture-rule:
     name: mixture rule
@@ -169,7 +179,7 @@ jobs:
         adapter: [ proxy, jdbc ]
         mode: [ Standalone, Cluster ]
         database: [ MySQL, PostgreSQL, openGauss ]
-        scenario: [ dbtbl_with_readwrite_splitting, dbtbl_with_readwrite_splitting_and_encrypt, sharding_and_encrypt, encrypt_and_readwrite_splitting, encrypt_shadow, readwrite_splitting_and_shadow, sharding_and_shadow, sharding_encrypt_shadow, mask_encrypt ]
+        scenario: [ dbtbl_with_readwrite_splitting, dbtbl_with_readwrite_splitting_and_encrypt, sharding_and_encrypt, encrypt_and_readwrite_splitting, encrypt_shadow, readwrite_splitting_and_shadow, sharding_and_shadow, sharding_encrypt_shadow, mask_encrypt, mask_sharding, mask_encrypt_sharding ]
         exclude:
           - adapter: jdbc
             mode: Cluster
@@ -193,4 +203,4 @@ jobs:
         if: matrix.adapter == 'proxy'
         run: docker load -i /tmp/${{ env.REPOSITORY_NAME }}-proxy-test.tar
       - name: Run E2E Test
-        run: ./mvnw -nsu -B install -f test/e2e/suite/pom.xml -Dspotless.apply.skip=true -Dit.cluster.env.type=DOCKER -Dit.cluster.adapters=${{ matrix.adapter }} -Dit.run.modes=${{ matrix.mode }} -Dit.cluster.databases=${{ matrix.database }} -Dit.scenarios=${{ matrix.scenario }}
+        run: ./mvnw -nsu -B install -f test/e2e/suite/pom.xml -Dspotless.apply.skip=true -Dit.cluster.env.type=DOCKER -Dit.cluster.adapters=${{ matrix.adapter }} -Dit.run.modes=${{ matrix.mode }} -Dit.run.additional.cases=true -Dit.cluster.databases=${{ matrix.database }} -Dit.scenarios=${{ matrix.scenario }}
