@@ -15,20 +15,28 @@
  * limitations under the License.
  */
 
-package org.apache.shardingsphere.readwritesplitting.algorithm.loadbalance;
+package org.apache.shardingsphere.infra.metadata.database.schema.decorator.reviser.index;
 
-import java.util.Collection;
+import org.apache.shardingsphere.infra.metadata.database.schema.loader.model.IndexMetaData;
+import org.apache.shardingsphere.infra.rule.ShardingSphereRule;
+import org.apache.shardingsphere.infra.util.spi.type.typed.TypedSPI;
+
+import java.util.Optional;
 
 /**
- * Weight aware.
+ * Index reviser.
+ * 
+ * @param <T> type of rule
  */
-// TODO should remove after merge TransactionWeightReadQueryLoadBalanceAlgorithm and WeightReadQueryLoadBalanceAlgorithm
-public interface WeightAware {
+public interface IndexReviser<T extends ShardingSphereRule> extends TypedSPI {
     
     /**
-     * Get data source names.
+     * Revise index meta data.
      * 
-     * @return data source names
+     * @param tableName table name
+     * @param originalMetaData original index meta data
+     * @param rule rule
+     * @return revised index meta data
      */
-    Collection<String> getDataSourceNames();
+    Optional<IndexMetaData> revise(String tableName, IndexMetaData originalMetaData, T rule);
 }

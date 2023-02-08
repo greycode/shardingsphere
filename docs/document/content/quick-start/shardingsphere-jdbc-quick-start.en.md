@@ -6,8 +6,8 @@ weight = 1
 
 ## Scenarios
 
-There are four ways you can configure Apache ShardingSphere: `Java` and `YAML`.
-Developers can choose the preferred method according to their requirements.
+There are two ways you can configure Apache ShardingSphere: `Java` and `YAML`. 
+Developers can choose the preferred method according to their requirements. 
 
 ## Limitations
 

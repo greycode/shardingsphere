@@ -15,28 +15,27 @@
  * limitations under the License.
  */
 
-package org.apache.shardingsphere.readwritesplitting.algorithm.loadbalance;
+package org.apache.shardingsphere.single.metadata.reviser;
 
-import org.apache.shardingsphere.infra.context.transaction.TransactionConnectionContext;
-import org.apache.shardingsphere.readwritesplitting.spi.ReadQueryLoadBalanceAlgorithm;
+import org.apache.shardingsphere.infra.metadata.database.schema.decorator.reviser.index.IndexReviser;
+import org.apache.shardingsphere.infra.metadata.database.schema.loader.model.IndexMetaData;
+import org.apache.shardingsphere.infra.metadata.database.schema.util.IndexMetaDataUtil;
+import org.apache.shardingsphere.single.rule.SingleRule;
 
-import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.Optional;
 
 /**
- * Transaction round-robin read query load-balance algorithm.
+ * Single index reviser.
  */
-public final class TransactionRoundRobinReadQueryLoadBalanceAlgorithm implements ReadQueryLoadBalanceAlgorithm {
-    
-    private final AtomicInteger count = new AtomicInteger(0);
+public final class SingleIndexReviser implements IndexReviser<SingleRule> {
     
     @Override
-    public String getDataSource(final String name, final String writeDataSourceName, final List<String> readDataSourceNames, final TransactionConnectionContext context) {
-        return readDataSourceNames.get(Math.abs(count.getAndIncrement()) % readDataSourceNames.size());
+    public Optional<IndexMetaData> revise(final String tableName, final IndexMetaData originalMetaData, final SingleRule singleRule) {
+        return Optional.of(new IndexMetaData(IndexMetaDataUtil.getLogicIndexName(originalMetaData.getName(), tableName)));
     }
     
     @Override
     public String getType() {
-        return "TRANSACTION_ROUND_ROBIN";
+        return SingleRule.class.getSimpleName();
     }
 }
