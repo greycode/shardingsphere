@@ -20,27 +20,27 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.apache.shardingsphere</groupId>
+        <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-transaction-xa</artifactId>
-        <version>5.3.2-SNAPSHOT</version>
+        <version>5.3.2.1</version>
     </parent>
     <artifactId>shardingsphere-transaction-xa-core</artifactId>
     <name>${project.artifactId}</name>
     
     <dependencies>
         <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
+            <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-transaction-xa-spi</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
+            <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-transaction-xa-atomikos</artifactId>
             <version>${project.version}</version>
         </dependency>
         
         <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
+            <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-test-fixture-jdbc</artifactId>
             <version>${project.version}</version>
             <scope>test</scope>
