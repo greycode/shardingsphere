@@ -22,16 +22,16 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-test-e2e-agent-plugins-tracing</artifactId>
-        <version>5.3.2.1</version>
+        <version>5.3.2.2</version>
     </parent>
     <artifactId>shardingsphere-test-e2e-agent-plugins-jaeger</artifactId>
     <name>${project.artifactId}</name>
-    
+
     <properties>
         <maven.deploy.skip>true</maven.deploy.skip>
         <mysql-connector-java.version>8.0.31</mysql-connector-java.version>
     </properties>
-    
+
     <dependencies>
         <dependency>
             <groupId>io.github.greycode</groupId>
@@ -39,7 +39,7 @@
             <version>${project.version}</version>
             <type>test-jar</type>
         </dependency>
-        
+
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -51,7 +51,7 @@
             <artifactId>HikariCP</artifactId>
         </dependency>
     </dependencies>
-    
+
     <build>
         <plugins>
             <plugin>
@@ -68,7 +68,7 @@
             </plugin>
         </plugins>
     </build>
-    
+
     <profiles>
         <profile>
             <id>it.env.jaeger</id>

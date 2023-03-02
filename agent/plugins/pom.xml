@@ -22,20 +22,20 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-agent</artifactId>
-        <version>5.3.2.1</version>
+        <version>5.3.2.2</version>
     </parent>
     <artifactId>shardingsphere-agent-plugins</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-    
+
     <modules>
         <module>core</module>
-        
+
         <module>metrics</module>
         <module>tracing</module>
         <module>logging</module>
     </modules>
-    
+
     <dependencies>
         <dependency>
             <groupId>io.github.greycode</groupId>
@@ -43,7 +43,7 @@
             <version>${project.version}</version>
             <scope>provided</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
@@ -55,7 +55,7 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-    
+
     <build>
         <plugins>
             <plugin>
