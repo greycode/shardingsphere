@@ -26,7 +26,7 @@
     </parent>
     <artifactId>shardingsphere-proxy-frontend-core</artifactId>
     <name>${project.artifactId}</name>
-    
+
     <dependencies>
         <dependency>
             <groupId>io.github.greycode</groupId>
@@ -40,10 +40,25 @@
         </dependency>
         <dependency>
             <groupId>io.github.greycode</groupId>
-            <artifactId>shardingsphere-proxy-backend</artifactId>
+            <artifactId>shardingsphere-proxy-backend-core</artifactId>
             <version>${project.version}</version>
         </dependency>
-        
+        <dependency>
+            <groupId>io.github.greycode</groupId>
+            <artifactId>shardingsphere-proxy-backend-mysql</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.greycode</groupId>
+            <artifactId>shardingsphere-proxy-backend-postgresql</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.greycode</groupId>
+            <artifactId>shardingsphere-proxy-backend-opengauss</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-test-fixture-infra</artifactId>
@@ -56,7 +71,7 @@
             <version>${project.version}</version>
             <scope>test</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-handler</artifactId>

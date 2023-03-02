@@ -39,6 +39,7 @@
         <module>sql-federation</module>
         <module>sql-translator</module>
         <module>traffic</module>
+        <module>logging</module>
     </modules>
     
 </project>
