@@ -26,11 +26,11 @@
     </parent>
     <artifactId>shardingsphere-agent-metrics-core</artifactId>
     <name>${project.artifactId}</name>
-    
+
     <properties>
         <target.directory>${project.basedir}/target/lib</target.directory>
     </properties>
-    
+
     <dependencies>
         <dependency>
             <groupId>io.github.greycode</groupId>
@@ -75,9 +75,9 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>io.github.greycode</groupId>
+            <groupId>org.apache.shardingsphere</groupId>
             <artifactId>shardingsphere-proxy-backend</artifactId>
-            <version>5.3.2.1</version>
+            <version>5.3.1</version>
             <scope>provided</scope>
             <exclusions>
                 <exclusion>
@@ -86,7 +86,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        
+
         <dependency>
             <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-data-pipeline-distsql-statement</artifactId>
@@ -94,7 +94,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-    
+
     <build>
         <plugins>
             <plugin>
