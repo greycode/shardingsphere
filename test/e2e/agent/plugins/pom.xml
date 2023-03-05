@@ -22,7 +22,7 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-test-e2e-agent</artifactId>
-        <version>5.3.2.2</version>
+        <version>5.3.2.3</version>
     </parent>
     <artifactId>shardingsphere-test-e2e-agent-plugins</artifactId>
     <packaging>pom</packaging>
@@ -32,5 +32,6 @@
         <module>common</module>
         <module>metrics</module>
         <module>tracing</module>
+        <module>logging</module>
     </modules>
 </project>

@@ -22,7 +22,7 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-data-pipeline-distsql</artifactId>
-        <version>5.3.2.2</version>
+        <version>5.3.2.3</version>
     </parent>
     <artifactId>shardingsphere-data-pipeline-distsql-parser</artifactId>
     <name>${project.artifactId}</name>
@@ -98,6 +98,18 @@
                                 <configuration>
                                     <sourceDirectory>src/main/antlr4/migration/</sourceDirectory>
                                     <libDirectory>src/main/antlr4/imports/migration/</libDirectory>
+                                    <listener>false</listener>
+                                    <visitor>true</visitor>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>antlr-cdc</id>
+                                <goals>
+                                    <goal>antlr4</goal>
+                                </goals>
+                                <configuration>
+                                    <sourceDirectory>src/main/antlr4/cdc/</sourceDirectory>
+                                    <libDirectory>src/main/antlr4/imports/cdc/</libDirectory>
                                     <listener>false</listener>
                                     <visitor>true</visitor>
                                 </configuration>

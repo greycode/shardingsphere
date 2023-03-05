@@ -22,7 +22,7 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-data-pipeline-cdc</artifactId>
-        <version>5.3.2.2</version>
+        <version>5.3.2.3</version>
     </parent>
     <artifactId>shardingsphere-data-pipeline-cdc-core</artifactId>
     <name>${project.artifactId}</name>
@@ -38,9 +38,22 @@
             <artifactId>shardingsphere-data-pipeline-cdc-protocol</artifactId>
             <version>${project.version}</version>
         </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
         </dependency>
     </dependencies>
 </project>

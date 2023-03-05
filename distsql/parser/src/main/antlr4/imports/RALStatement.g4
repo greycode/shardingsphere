@@ -47,10 +47,6 @@ showComputeNodes
     : SHOW COMPUTE NODES
     ;
 
-clearHint
-    : CLEAR HINT
-    ;
-
 refreshDatabaseMetadata
     : REFRESH DATABASE METADATA databaseName? FROM GOVERNANCE CENTER
     ;
@@ -85,6 +81,14 @@ exportDatabaseConfiguration
 
 importDatabaseConfiguration
     : IMPORT DATABASE CONFIGURATION FROM FILE filePath
+    ;
+
+exportMetaData
+    : EXPORT METADATA (TO FILE filePath)?
+    ;
+
+importMetaData
+    : IMPORT METADATA (metaDataValue | FROM FILE filePath)
     ;
 
 convertYamlConfiguration
@@ -136,6 +140,10 @@ confPath
     ;
 
 filePath
+    : STRING_
+    ;
+
+metaDataValue
     : STRING_
     ;
 
