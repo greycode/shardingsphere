@@ -15,17 +15,6 @@
  * limitations under the License.
  */
 
-<<<<<<<< HEAD:kernel/data-pipeline/distsql/parser/src/main/antlr4/cdc/org/apache/shardingsphere/distsql/parser/autogen/CDCDistSQLStatement.g4
-grammar CDCDistSQLStatement;
-
-import Symbol, RALStatement;
-
-execute
-    : (showStreamingList
-    | showStreamingStatus
-    ) SEMI?
-    ;
-========
 package org.apache.shardingsphere.infra.state.cluster;
 
 /**
@@ -35,4 +24,3 @@ public enum ClusterState {
     
     OK, READ_ONLY, UNAVAILABLE
 }
->>>>>>>> apache-master:infra/common/src/main/java/org/apache/shardingsphere/infra/state/cluster/ClusterState.java

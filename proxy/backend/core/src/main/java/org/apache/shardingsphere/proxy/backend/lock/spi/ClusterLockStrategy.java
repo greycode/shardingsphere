@@ -15,16 +15,6 @@
  * limitations under the License.
  */
 
-<<<<<<<< HEAD:kernel/data-pipeline/distsql/statement/src/main/java/org/apache/shardingsphere/cdc/distsql/statement/ShowStreamingListStatement.java
-package org.apache.shardingsphere.cdc.distsql.statement;
-
-import org.apache.shardingsphere.distsql.parser.statement.ral.scaling.QueryableScalingRALStatement;
-
-/**
- * Show streaming list statement.
- */
-public final class ShowStreamingListStatement extends QueryableScalingRALStatement {
-========
 package org.apache.shardingsphere.proxy.backend.lock.spi;
 
 import org.apache.shardingsphere.infra.util.spi.type.typed.TypedSPI;
@@ -33,10 +23,9 @@ import org.apache.shardingsphere.infra.util.spi.type.typed.TypedSPI;
  * Cluster lock strategy.
  */
 public interface ClusterLockStrategy extends TypedSPI {
-    
-    /**
-     * Lock cluster.
-     */
-    void lock();
->>>>>>>> apache-master:proxy/backend/core/src/main/java/org/apache/shardingsphere/proxy/backend/lock/spi/ClusterLockStrategy.java
+
+  /**
+   * Lock cluster.
+   */
+  void lock();
 }

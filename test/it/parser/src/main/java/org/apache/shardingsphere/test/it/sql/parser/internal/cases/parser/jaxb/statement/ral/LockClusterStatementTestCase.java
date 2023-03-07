@@ -15,38 +15,22 @@
  * limitations under the License.
  */
 
-package org.apache.shardingsphere.test.it.sql.parser.internal.cases.parser.jaxb.segment.impl.definition;
+package org.apache.shardingsphere.test.it.sql.parser.internal.cases.parser.jaxb.statement.ral;
 
 import lombok.Getter;
 import lombok.Setter;
-<<<<<<<< HEAD:test/it/parser/src/main/java/org/apache/shardingsphere/test/it/sql/parser/internal/cases/parser/jaxb/segment/impl/definition/ExpectedIndexDefinition.java
-import org.apache.shardingsphere.test.it.sql.parser.internal.cases.parser.jaxb.segment.AbstractExpectedSQLSegment;
-import org.apache.shardingsphere.test.it.sql.parser.internal.cases.parser.jaxb.segment.impl.index.ExpectedIndex;
-========
 import org.apache.shardingsphere.distsql.parser.segment.AlgorithmSegment;
 import org.apache.shardingsphere.test.it.sql.parser.internal.cases.parser.jaxb.SQLParserTestCase;
->>>>>>>> apache-master:test/it/parser/src/main/java/org/apache/shardingsphere/test/it/sql/parser/internal/cases/parser/jaxb/statement/ral/LockClusterStatementTestCase.java
 
 import javax.xml.bind.annotation.XmlElement;
 
 /**
-<<<<<<<< HEAD:test/it/parser/src/main/java/org/apache/shardingsphere/test/it/sql/parser/internal/cases/parser/jaxb/segment/impl/definition/ExpectedIndexDefinition.java
- * Expected index definition.
- */
-@Getter
-@Setter
-public final class ExpectedIndexDefinition extends AbstractExpectedSQLSegment {
-    
-    @XmlElement
-    private ExpectedIndex index;
-========
  * Lock cluster statement test case.
  */
 @Getter
 @Setter
 public final class LockClusterStatementTestCase extends SQLParserTestCase {
-    
-    @XmlElement(name = "lock-strategy")
-    private AlgorithmSegment lockStrategy;
->>>>>>>> apache-master:test/it/parser/src/main/java/org/apache/shardingsphere/test/it/sql/parser/internal/cases/parser/jaxb/statement/ral/LockClusterStatementTestCase.java
+
+  @XmlElement(name = "lock-strategy")
+  private AlgorithmSegment lockStrategy;
 }
