@@ -20,11 +20,27 @@ package org.apache.shardingsphere.test.it.sql.parser.internal.cases.parser.jaxb.
 import lombok.Getter;
 import lombok.Setter;
 import org.apache.shardingsphere.test.it.sql.parser.internal.cases.parser.jaxb.segment.AbstractExpectedSQLSegment;
+<<<<<<<< HEAD:test/it/parser/src/main/java/org/apache/shardingsphere/test/it/sql/parser/internal/cases/parser/jaxb/segment/impl/definition/ExpectedRenameIndexDefinition.java
+========
 import org.apache.shardingsphere.test.it.sql.parser.internal.cases.parser.jaxb.segment.impl.index.ExpectedIndex;
+>>>>>>>> apache-master:test/it/parser/src/main/java/org/apache/shardingsphere/test/it/sql/parser/internal/cases/parser/jaxb/segment/impl/definition/ExpectedIndexDefinition.java
 
 import javax.xml.bind.annotation.XmlElement;
 
 /**
+<<<<<<<< HEAD:test/it/parser/src/main/java/org/apache/shardingsphere/test/it/sql/parser/internal/cases/parser/jaxb/segment/impl/definition/ExpectedRenameIndexDefinition.java
+ * Expected rename index definition.
+ */
+@Getter
+@Setter
+public final class ExpectedRenameIndexDefinition extends AbstractExpectedSQLSegment {
+    
+    @XmlElement(name = "index-definition")
+    private ExpectedIndexDefinition indexDefinition;
+    
+    @XmlElement(name = "rename-index-definition")
+    private ExpectedIndexDefinition renameIndexDefinition;
+========
  * Expected index definition.
  */
 @Getter
@@ -33,4 +49,5 @@ public final class ExpectedIndexDefinition extends AbstractExpectedSQLSegment {
     
     @XmlElement
     private ExpectedIndex index;
+>>>>>>>> apache-master:test/it/parser/src/main/java/org/apache/shardingsphere/test/it/sql/parser/internal/cases/parser/jaxb/segment/impl/definition/ExpectedIndexDefinition.java
 }

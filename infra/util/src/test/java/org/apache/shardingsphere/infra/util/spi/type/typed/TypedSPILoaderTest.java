@@ -29,9 +29,10 @@ import java.util.Properties;
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public final class TypedSPILoaderTest {
     
@@ -66,8 +67,8 @@ public final class TypedSPILoaderTest {
         assertNotNull(TypedSPILoader.getService(TypedSPIFixture.class, "TYPED.ALIAS"));
     }
     
-    @Test(expected = ServiceProviderNotFoundServerException.class)
+    @Test
     public void assertGetServiceWhenTypeIsNotExist() {
-        TypedSPILoader.getService(TypedSPIFixture.class, "NOT_EXISTED");
+        assertThrows(ServiceProviderNotFoundServerException.class, () -> TypedSPILoader.getService(TypedSPIFixture.class, "NOT_EXISTED"));
     }
 }

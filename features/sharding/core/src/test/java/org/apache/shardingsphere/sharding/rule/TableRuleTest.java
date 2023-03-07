@@ -42,8 +42,9 @@ import java.util.Map;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public final class TableRuleTest {
     
@@ -143,11 +144,11 @@ public final class TableRuleTest {
         assertFalse(actual.isExisted("table_3"));
     }
     
-    @Test(expected = DataNodesMissedWithShardingTableException.class)
+    @Test
     public void assertActualDataNodesNotConfigured() {
         ShardingTableRuleConfiguration shardingTableRuleConfig = new ShardingTableRuleConfiguration("LOGIC_TABLE", "");
         shardingTableRuleConfig.setTableShardingStrategy(new StandardShardingStrategyConfiguration("shardingColumn", "INLINE"));
-        new TableRule(shardingTableRuleConfig, Arrays.asList("ds0", "ds1"), null);
+        assertThrows(DataNodesMissedWithShardingTableException.class, () -> new TableRule(shardingTableRuleConfig, Arrays.asList("ds0", "ds1"), null));
     }
     
     @Test

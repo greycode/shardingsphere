@@ -22,23 +22,23 @@
     <parent>
         <groupId>io.github.greycode</groupId>
         <artifactId>shardingsphere-agent-metrics-type</artifactId>
-        <version>5.3.2.3</version>
+        <version>5.3.2.4</version>
     </parent>
     <artifactId>shardingsphere-agent-metrics-prometheus</artifactId>
     <name>${project.artifactId}</name>
-    
+
     <properties>
         <prometheus.version>0.11.0</prometheus.version>
         <prometheus.jmx.version>0.16.1</prometheus.jmx.version>
     </properties>
-    
+
     <dependencies>
         <dependency>
             <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-agent-metrics-core</artifactId>
             <version>${project.version}</version>
         </dependency>
-        
+
         <dependency>
             <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-proxy-bootstrap</artifactId>
@@ -81,14 +81,14 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        
+
         <dependency>
             <groupId>io.github.greycode</groupId>
             <artifactId>shardingsphere-test-util</artifactId>
             <version>${project.version}</version>
             <scope>test</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>io.prometheus</groupId>
             <artifactId>simpleclient</artifactId>
@@ -110,7 +110,7 @@
             <version>${prometheus.jmx.version}</version>
         </dependency>
     </dependencies>
-    
+
     <build>
         <plugins>
             <plugin>
