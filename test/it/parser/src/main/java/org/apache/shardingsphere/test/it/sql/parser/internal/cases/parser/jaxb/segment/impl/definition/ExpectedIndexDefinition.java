@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.XmlElement;
 @Getter
 @Setter
 public final class ExpectedIndexDefinition extends AbstractExpectedSQLSegment {
-
-  @XmlElement
-  private ExpectedIndex index;
+    
+    @XmlElement
+    private ExpectedIndex index;
 }

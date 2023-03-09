@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.XmlElement;
 @Getter
 @Setter
 public final class LockClusterStatementTestCase extends SQLParserTestCase {
-
-  @XmlElement(name = "lock-strategy")
-  private AlgorithmSegment lockStrategy;
+    
+    @XmlElement(name = "lock-strategy")
+    private AlgorithmSegment lockStrategy;
 }
